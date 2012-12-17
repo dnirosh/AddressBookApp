@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Addressbook", "Addressbook\Addressbook.csproj", "{06366F7B-8D13-434F-83F9-8DF5881D0CEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Addressbook.Tests", "Addressbook.Tests\Addressbook.Tests.csproj", "{A268FE4E-0762-49E8-B279-B58F9FA4BB9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06366F7B-8D13-434F-83F9-8DF5881D0CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06366F7B-8D13-434F-83F9-8DF5881D0CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06366F7B-8D13-434F-83F9-8DF5881D0CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06366F7B-8D13-434F-83F9-8DF5881D0CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A268FE4E-0762-49E8-B279-B58F9FA4BB9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A268FE4E-0762-49E8-B279-B58F9FA4BB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A268FE4E-0762-49E8-B279-B58F9FA4BB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A268FE4E-0762-49E8-B279-B58F9FA4BB9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

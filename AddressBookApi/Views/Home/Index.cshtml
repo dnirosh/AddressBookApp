@@ -18,15 +18,21 @@
     <script src="@Url.Content("~/Scripts/knockout-2.1.0.js")" type="text/javascript"></script>
     <script type="text/javascript">
         var API_URL = "http://localhost:41985/api/AddressBookApi/";
+
+        function AddressBookEntry(_Name ,_Address) {
+            var self = this;
+            self.Name    = _Name;
+            self.Address = _Address;
+        }
+
         function AddressBookViewModel() {
-            this.Name = ko.observable("Dileepa");
-            this.Address = ko.observable("56 ,negombo");
+            var self = this;
+            self.AddressBookEntries = [{ name: "Dileepa", address: "Negombo" }, { name: "Knockout", address: "Javascript" }];
         }
-        function displayURL() {
-            console.log("API_URL:" + API_URL);
-        }
+
+        
+
         // Activates knockout.js
-        console.log("ko.applyBindings");
         ko.applyBindings(new AddressBookViewModel());
     </script>
 }
@@ -55,7 +61,7 @@
                 </th>
             </tr>
         </thead>
-        <tbody>
-            <tr><td><input name="Name" data-bind="value:Name"/></td><td><input name="Address" data-bind="value:Address"/></td></tr>
+        <tbody data-bind="foreach: AddressBookEntries">
+            <tr><td><input data-bind="value:name"/></td><td><input data-bind="value:address"/></td></tr>
         </tbody>
 </div>

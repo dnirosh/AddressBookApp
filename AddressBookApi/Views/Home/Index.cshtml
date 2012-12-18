@@ -1,0 +1,61 @@
+﻿@section scripts{
+     <style type="text/css">
+        .list
+        {
+            font:10pt Tahoma; color:#000;
+            background:#9bbb59;
+        }
+        .head{background:#9bbb59; }
+        .row{background:#e6eed5; }
+        .boldtext{font-weight:bold}
+ 
+        .editing { display: none; }
+        .hiden{display: none;}
+        .editing_input {display: block;}
+ 
+    </style>
+
+    <script src="@Url.Content("~/Scripts/knockout-2.1.0.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        var API_URL = "http://localhost:41985/api/AddressBookApi/";
+        function AddressBookViewModel() {
+            this.Name = ko.observable("Dileepa");
+            this.Address = ko.observable("56 ,negombo");
+        }
+        function displayURL() {
+            console.log("API_URL:" + API_URL);
+        }
+        // Activates knockout.js
+        console.log("ko.applyBindings");
+        ko.applyBindings(new AddressBookViewModel());
+    </script>
+}
+
+<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/"> Address Book using Web Api </a></p>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <p> Address Book Entries </p>
+      <table class="list" cellpadding="5" cellspacing="1">
+        <thead>
+            <tr class="head">
+                <th>
+                    Name
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+ 
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><input name="Name" data-bind="value:Name"/></td><td><input name="Address" data-bind="value:Address"/></td></tr>
+        </tbody>
+</div>

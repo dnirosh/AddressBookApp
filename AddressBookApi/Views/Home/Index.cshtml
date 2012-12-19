@@ -15,25 +15,59 @@
  
     </style>
 
-    <script src="@Url.Content("~/Scripts/knockout-2.1.0.js")" type="text/javascript"></script>
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/knockout-2.1.0.debug.js"></script>
+    <script src="~/Scripts/knockout.mapping-latest.debug.js"></script>
     <script type="text/javascript">
-        var API_URL = "http://localhost:41985/api/AddressBookApi/";
+        $(function () {
+            var API_URL = "http://localhost:41985/api/AddressBookApi/";
 
-        function AddressBookEntry(_Name ,_Address) {
-            var self = this;
-            self.Name    = _Name;
-            self.Address = _Address;
-        }
+            function AddressBookEntry(Name, Address) {
+                var self = this;
+                self.Name = Name;
+                self.Address = Address;
+            }
 
-        function AddressBookViewModel() {
-            var self = this;
-            self.AddressBookEntries = [{ name: "Dileepa", address: "Negombo" }, { name: "Knockout", address: "Javascript" }];
-        }
+            function AddressBookViewModel() {
+                var self = this;
+                self.AddressBookEntriesArray = ko.observableArray();
 
-        
+                alert("in view model");
+                /*
+                self.AddressBookEntries = [{ name: "Dileepa", address: "Negombo" }, { name: "Knockout", address: "Javascript" }];
+                // Editable data
 
-        // Activates knockout.js
-        ko.applyBindings(new AddressBookViewModel());
+                self.AddressBookEntriesArray = ko.observableArray([
+                    new AddressBookEntry("asdsd", "sdsd")
+                ]); */
+
+                //Load address book entries  
+
+                getAddressBookData(self);
+
+                self.addAddressBookEntry = function () {
+                    self.AddressBookEntriesArray.push(new AddressBookEntry("newName", "newAddress"));
+                };
+            }
+
+            function getAddressBookData(_this) {
+                $.get(
+                        API_URL,
+                        function (data) {
+                            var results = ko.observableArray();
+                            ko.mapping.fromJS(data, {}, results);
+                            for (var i = 0; i < results().length; i++) {
+                                _this.AddressBookEntriesArray.push(new AddressBookEntry(results()[i].Id(), results()[i].Name(), results()[i].Address()));
+                            };
+                        },
+                        'json'
+                    )
+            }
+
+            // Activates knockout.js
+            ko.applyBindings(new AddressBookViewModel());
+
+        });
     </script>
 }
 
@@ -61,7 +95,13 @@
                 </th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: AddressBookEntries">
-            <tr><td><input data-bind="value:name"/></td><td><input data-bind="value:address"/></td></tr>
+        <tbody data-bind="foreach: AddressBookEntriesArray">
+            <tr><td><input data-bind="value:Name"/></td><td><input data-bind="value:Address"/></td></tr>
         </tbody>
+    </table>
+
+    <div id="buttonPanel">
+        <button id="btnAdd" data-bind="click : addAddressBookEntry" > Add Entry </button>   
+
+    </div>
 </div>

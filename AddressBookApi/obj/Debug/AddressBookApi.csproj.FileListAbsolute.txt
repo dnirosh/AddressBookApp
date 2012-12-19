@@ -29,3 +29,4 @@ C:\Users\djy\Documents\Visual Studio 2012\Projects\Addressbook\AddressBookApi\bi
 C:\Users\djy\Documents\Visual Studio 2012\Projects\Addressbook\AddressBookApi\bin\System.Web.WebPages.Razor.xml
 C:\Users\djy\Documents\Visual Studio 2012\Projects\Addressbook\AddressBookApi\obj\Debug\AddressBookApi.dll
 C:\Users\djy\Documents\Visual Studio 2012\Projects\Addressbook\AddressBookApi\obj\Debug\AddressBookApi.pdb
+C:\Users\djy\Documents\Visual Studio 2012\Projects\Addressbook\AddressBookApi\obj\Debug\AddressBookApi.csprojResolveAssemblyReference.cache

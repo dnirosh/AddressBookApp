@@ -10,30 +10,30 @@ namespace AddressBookApi.Controllers
 {
     public class AddressBookApiController : ApiController
     {
-        List<AddressBook> addressBooks = new List<AddressBook>();
+        List<AddressBookEntry> addressBooks = new List<AddressBookEntry>();
         public AddressBookApiController()
         {
-            addressBooks.Add(new AddressBook{ Id = 1, Name = "Dileepa" ,Address = "Earth" });
+            addressBooks.Add(new AddressBookEntry { Id = 1, Name = "Dileepa", Address = "Earth" });
 
         }
 
         // GET api/addressbookapi
-        public IEnumerable<AddressBook> GetAddressBook()
+        public IEnumerable<AddressBookEntry> GetAddressBook()
         {
             return addressBooks;
         }
 
         // GET api/addressbookapi/5
-        public AddressBook GetAddressBook(int id)
+        public AddressBookEntry GetAddressBook(int id)
         {
             var address = addressBooks.FirstOrDefault(a => a.Id == id);
             return address;
         }
 
         // POST api/addressbookapi
-        public void PostAddressBook([FromBody]string value)
+        public AddressBookEntry PostAddressBook([FromBody]AddressBookEntry addressBookEntry)
         {
-
+            return addressBookEntry;
         }
 
         // PUT api/addressbookapi/5

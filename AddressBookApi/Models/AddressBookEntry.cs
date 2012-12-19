@@ -5,7 +5,7 @@ using System.Web;
 
 namespace AddressBookApi.Models
 {
-    public class AddressBook
+    public class AddressBookEntry
     {
         public int Id {get;set;}
         public string Name { get; set; }

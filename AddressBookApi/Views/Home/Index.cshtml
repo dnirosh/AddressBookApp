@@ -28,11 +28,12 @@
                 self.Address = Address;
             }
 
-            function AddressBookViewModel() {
+            var AddressBookViewModel = function () {
                 var self = this;
+                self.Name = ko.observable();
+                self.Address = ko.observable();
                 self.AddressBookEntriesArray = ko.observableArray();
 
-                alert("in view model");
                 /*
                 self.AddressBookEntries = [{ name: "Dileepa", address: "Negombo" }, { name: "Knockout", address: "Javascript" }];
                 // Editable data
@@ -44,9 +45,33 @@
                 //Load address book entries  
 
                 getAddressBookData(self);
-
+                
+                /*
                 self.addAddressBookEntry = function () {
                     self.AddressBookEntriesArray.push(new AddressBookEntry("newName", "newAddress"));
+                }; */
+
+                self.addAddressBookEntry = function () {
+                    //alert('self.Name=' + self.Name());
+                    var jsondata = new AddressBookEntry(self.Name(), self.Address());
+                    jsondata = ko.toJS(jsondata);
+                    jsondata = JSON.stringify(jsondata);
+
+                    $.ajax({
+                        url: API_URL,
+                        cache: false,
+                        type: 'POST',
+                        contentType: 'application/json; charset=utf-8',
+                        data: jsondata,
+                        statusCode: {
+                            200: function (data) {                                
+                                self.AddressBookEntriesArray.push(new AddressBookEntry(data.Name, data.Address));
+                                self.Name("");
+                                self.Address("");
+                            }
+                        }
+                    });
+                    /*self.AddressBookEntriesArray.push(new AddressBookEntry("newName", "newAddress"));*/
                 };
             }
 
@@ -98,10 +123,14 @@
         <tbody data-bind="foreach: AddressBookEntriesArray">
             <tr><td><input data-bind="value:Name"/></td><td><input data-bind="value:Address"/></td></tr>
         </tbody>
+        <tfoot>
+            <form data-bind="submit: addAddressBookEntry">
+                <tr class="row"><td><input data-bind="value:Name"/></td><td><input data-bind="value:Address"/></td></tr>
+            </form>
+        </tfoot>
     </table>
 
     <div id="buttonPanel">
-        <button id="btnAdd" data-bind="click : addAddressBookEntry" > Add Entry </button>   
-
+        <button id="btnAdd" data-bind="click : addAddressBookEntry" > Add Entry </button>
     </div>
 </div>

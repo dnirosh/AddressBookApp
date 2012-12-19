@@ -30,3 +30,34 @@ C:\Users\djy\Documents\Visual Studio 2012\Projects\Addressbook\AddressBookApi\bi
 C:\Users\djy\Documents\Visual Studio 2012\Projects\Addressbook\AddressBookApi\obj\Debug\AddressBookApi.dll
 C:\Users\djy\Documents\Visual Studio 2012\Projects\Addressbook\AddressBookApi\obj\Debug\AddressBookApi.pdb
 C:\Users\djy\Documents\Visual Studio 2012\Projects\Addressbook\AddressBookApi\obj\Debug\AddressBookApi.csprojResolveAssemblyReference.cache
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\AddressBookApi.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\AddressBookApi.pdb
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\Antlr3.Runtime.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\EntityFramework.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\Newtonsoft.Json.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Net.Http.Formatting.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Helpers.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Http.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Http.WebHost.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Mvc.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Optimization.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Providers.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Razor.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.WebPages.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.WebPages.Razor.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\WebGrease.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\EntityFramework.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\Newtonsoft.Json.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Net.Http.Formatting.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Helpers.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Http.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Http.WebHost.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Mvc.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.Razor.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.WebPages.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\System.Web.WebPages.Razor.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\obj\Debug\AddressBookApi.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\obj\Debug\AddressBookApi.pdb

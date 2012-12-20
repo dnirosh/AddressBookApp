@@ -6,13 +6,12 @@
         <WebProjectProperties>
           <StartPageUrl>
           </StartPageUrl>
-          <StartAction>SpecificPage</StartAction>
+          <StartAction>Program</StartAction>
           <AspNetDebugging>True</AspNetDebugging>
           <SilverlightDebugging>False</SilverlightDebugging>
           <NativeDebugging>False</NativeDebugging>
           <SQLDebugging>False</SQLDebugging>
-          <ExternalProgram>
-          </ExternalProgram>
+          <ExternalProgram>C:\Program Files (x86)\NUnit 2.6.2\bin\nunit.exe</ExternalProgram>
           <StartExternalURL>
           </StartExternalURL>
           <StartCmdLineArguments>

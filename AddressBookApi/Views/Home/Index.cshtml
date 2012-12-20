@@ -82,7 +82,7 @@
                             var results = ko.observableArray();
                             ko.mapping.fromJS(data, {}, results);
                             for (var i = 0; i < results().length; i++) {
-                                _this.AddressBookEntriesArray.push(new AddressBookEntry(results()[i].Id(), results()[i].Name(), results()[i].Address()));
+                                _this.AddressBookEntriesArray.push(new AddressBookEntry(results()[i].Name(), results()[i].Address()));
                             };
                         },
                         'json'
@@ -100,7 +100,7 @@
     <div class="content-wrapper">
         <div class="float-left">
             <p class="site-title">
-                <a href="~/"> Address Book using Web Api </a></p>
+                <a href="~/"> Address Book using Web Api and Knockout </a></p>
         </div>
     </div>
 </header>

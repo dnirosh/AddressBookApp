@@ -62,3 +62,16 @@ C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\Syst
 C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\obj\Debug\AddressBookApi.Tests.dll
 C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\obj\Debug\AddressBookApi.Tests.pdb
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\Castle.Core.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\FluentAssertions.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\nunit.framework.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\WebDriver.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\WebDriver.Support.dll
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\Castle.Core.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\FluentAssertions.pdb
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\FluentAssertions.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\nunit.framework.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\WebDriver.xml
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi.Tests\bin\Debug\WebDriver.Support.xml

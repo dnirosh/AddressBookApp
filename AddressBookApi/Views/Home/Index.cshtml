@@ -106,7 +106,7 @@
 </header>
 <div id="body">
     <p> Address Book Entries </p>
-      <table class="list" cellpadding="5" cellspacing="1">
+      <table id="addressBookTable" class="list" cellpadding="5" cellspacing="1">
         <thead>
             <tr class="head">
                 <th>
@@ -120,7 +120,7 @@
                 </th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: AddressBookEntriesArray">
+        <tbody id="addressBookBody" data-bind="foreach: AddressBookEntriesArray">
             <tr><td><input data-bind="value:Name"/></td><td><input data-bind="value:Address"/></td></tr>
         </tbody>
         <tfoot>

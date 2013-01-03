@@ -1,27 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\AddressBookApi.dll" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-01-03" time="10:41:07">
+<test-results name="C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\AddressBookApi.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-01-03" time="11:54:50">
   <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.5466" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.2\bin" machine-name="ES-NB-DEV48" user="djy" user-domain="EXILESOFT" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\AddressBookApi.dll" executed="True" result="Failure" success="False" time="17.531" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\AddressBookApi.dll" executed="True" result="Success" success="True" time="14.550" asserts="0">
     <results>
-      <test-suite type="Namespace" name="AddressBookApi" executed="True" result="Failure" success="False" time="17.501" asserts="0">
+      <test-suite type="Namespace" name="AddressBookApi" executed="True" result="Success" success="True" time="14.550" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="17.498" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="14.550" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="Driver" executed="True" result="Failure" success="False" time="17.464" asserts="0">
+              <test-suite type="TestFixture" name="Driver" executed="True" result="Success" success="True" time="14.549" asserts="0">
                 <results>
-                  <test-case name="AddressBookApi.Tests.Driver.AddressBookTest" executed="True" result="Failure" success="False" time="17.313" asserts="1">
-                    <failure>
-                      <message><![CDATA[  Expected string length 7 but was 0. Strings differ at index 0.
-  Expected: "Dileepa"
-  But was:  <string.Empty>
-  -----------^
-]]></message>
-                      <stack-trace><![CDATA[at AddressBookApi.Tests.Driver.AddressBookTest() in c:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\UnitTests\SeleniumUnitTest.cs:line 85
-]]></stack-trace>
-                    </failure>
-                  </test-case>
+                  <test-case name="AddressBookApi.Tests.Driver.TestName" executed="True" result="Success" success="True" time="14.548" asserts="0" />
                 </results>
               </test-suite>
             </results>

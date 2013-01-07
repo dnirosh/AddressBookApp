@@ -21,15 +21,18 @@
     <script type="text/javascript">
         $(function () {
             var API_URL = "http://localhost:41985/api/AddressBookApi/";
+            var highestId = 1; //maintain a sequence for addressbook entries
 
-            function AddressBookEntry(Name, Address) {
+            function AddressBookEntry(Id , Name, Address) {
                 var self = this;
+                self.Id = ko.observable(Id);
                 self.Name = Name;
                 self.Address = Address;
             }
 
             var AddressBookViewModel = function () {
                 var self = this;
+                self.Id = ko.observable();
                 self.Name = ko.observable();
                 self.Address = ko.observable();
                 self.AddressBookEntriesArray = ko.observableArray();
@@ -52,8 +55,10 @@
                 }; */
 
                 self.addAddressBookEntry = function () {
+                    if (self.Name() == "" || self.Address() == "")
+                        return false;
                     //alert('self.Name=' + self.Name());
-                    var jsondata = new AddressBookEntry(self.Name(), self.Address());
+                    var jsondata = new AddressBookEntry(++highestId, self.Name(), self.Address());
                     jsondata = ko.toJS(jsondata);
                     jsondata = JSON.stringify(jsondata);
 
@@ -65,7 +70,7 @@
                         data: jsondata,
                         statusCode: {
                             200: function (data) {                                
-                                self.AddressBookEntriesArray.push(new AddressBookEntry(data.Name, data.Address));
+                                self.AddressBookEntriesArray.push(new AddressBookEntry(data.Id,data.Name, data.Address));
                                 self.Name("");
                                 self.Address("");
                             }
@@ -82,7 +87,9 @@
                             var results = ko.observableArray();
                             ko.mapping.fromJS(data, {}, results);
                             for (var i = 0; i < results().length; i++) {
-                                _this.AddressBookEntriesArray.push(new AddressBookEntry(results()[i].Name(), results()[i].Address()));
+                                if (results()[i].Id() > highestId)
+                                    highestId = results()[i].Id();
+                                _this.AddressBookEntriesArray.push(new AddressBookEntry(results()[i].Id(), results()[i].Name(), results()[i].Address()));
                             };
                         },
                         'json'
@@ -121,16 +128,16 @@
             </tr>
         </thead>
         <tbody id="addressBookBody" data-bind="foreach: AddressBookEntriesArray">
-            <tr><td><input data-bind="value:Name"/></td><td><input data-bind="value:Address"/></td></tr>
+            <tr><td><input data-bind="value:Name ,attr:{ Id:'Name'+Id()}"/></td><td><input data-bind="value:Address,attr:{ Id:'Address'+Id()}"/></td></tr>
         </tbody>
         <tfoot>
             <form data-bind="submit: addAddressBookEntry">
-                <tr class="row"><td><input data-bind="value:Name"/></td><td><input data-bind="value:Address"/></td></tr>
+                <tr class="row"><td><input data-bind="value:Name ,attr:{ Id: 'Name'+Id()}" /></td><td><input data-bind="value:Address,attr:{ Id:'Address'+Id()}"/></td></tr>
             </form>
         </tfoot>
     </table>
 
     <div id="buttonPanel">
-        <button id="btnAdd" data-bind="click : addAddressBookEntry" > Add Entry </button>
+        <button id="AddEntry" data-bind="click : addAddressBookEntry" > Add Entry </button>
     </div>
 </div>

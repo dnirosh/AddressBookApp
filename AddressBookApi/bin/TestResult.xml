@@ -1,17 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\AddressBookApi.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-01-03" time="11:54:50">
+<test-results name="C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\AddressBookApi.dll" total="2" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-01-07" time="11:55:00">
   <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.5466" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.2\bin" machine-name="ES-NB-DEV48" user="djy" user-domain="EXILESOFT" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\AddressBookApi.dll" executed="True" result="Success" success="True" time="14.550" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\AddressBookApi.dll" executed="True" result="Success" success="True" time="26.902" asserts="0">
     <results>
-      <test-suite type="Namespace" name="AddressBookApi" executed="True" result="Success" success="True" time="14.550" asserts="0">
+      <test-suite type="Namespace" name="AddressBookApi" executed="True" result="Success" success="True" time="26.876" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="14.550" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="26.876" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="Driver" executed="True" result="Success" success="True" time="14.549" asserts="0">
+              <test-suite type="TestFixture" name="Driver" executed="True" result="Success" success="True" time="26.874" asserts="0">
                 <results>
-                  <test-case name="AddressBookApi.Tests.Driver.TestName" executed="True" result="Success" success="True" time="14.548" asserts="0" />
+                  <test-case name="AddressBookApi.Tests.Driver.T1_ItChecksInitialValuesOfContactList" executed="True" result="Success" success="True" time="16.605" asserts="2" />
+                  <test-case name="AddressBookApi.Tests.Driver.T2_ItAddsNewContactToList" executed="True" result="Success" success="True" time="10.234" asserts="0" />
                 </results>
               </test-suite>
             </results>

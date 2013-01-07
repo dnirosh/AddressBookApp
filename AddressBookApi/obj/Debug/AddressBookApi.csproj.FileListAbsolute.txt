@@ -80,3 +80,4 @@ C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\WebDriver.xml
 C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\bin\WebDriver.Support.xml
 C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\obj\Debug\AddressBookApi.dll
 C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\obj\Debug\AddressBookApi.pdb
+C:\Users\djy\Documents\GitHub\AddressBookApp\AddressBookApi\obj\Debug\AddressBookApi.csprojResolveAssemblyReference.cache

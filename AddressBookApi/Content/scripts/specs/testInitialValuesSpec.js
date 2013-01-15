@@ -12,7 +12,7 @@
         }, 1);
 
         //buy time till knockout values are rendered 
-        jasmine.Clock.tick(1);
+        jasmine.Clock.tick(5);
 
         var NameValue = $('#Name1').val();
         var AddressValue = $('#Address1').val();

@@ -14,15 +14,21 @@
         .editing_input {display: block;}
  
     </style>
-
+    <link href="~/Content/jasmine.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-1.7.1.min.js"></script>
     <script src="~/Scripts/knockout-2.1.0.debug.js"></script>
     <script src="~/Scripts/knockout.mapping-latest.debug.js"></script>
+    <!-- include jasmine core files here... -->
+    <script src="~/Scripts/jasmine.js"></script>
+    <script src="~/Scripts/jasmine-html.js"></script>
+    <!-- include test spec files here... -->
+
     <script type="text/javascript">
+        var ko_view_model = null;
+
         $(function () {
             var API_URL = "http://localhost:41985/api/AddressBookApi/";
             var highestId = 1; //maintain a sequence for addressbook entries
-
             function AddressBookEntry(Id , Name, Address) {
                 var self = this;
                 self.Id = ko.observable(Id);
@@ -97,9 +103,43 @@
             }
 
             // Activates knockout.js
-            ko.applyBindings(new AddressBookViewModel());
+            ko_view_model = new AddressBookViewModel();
+            ko.applyBindings(ko_view_model);
 
         });
+
+    </script>
+
+    <script src="~/Content/scripts/specs/testInitialValuesSpec.js"></script>
+
+    <script type="text/javascript">
+        //kickoff jasmine test runner
+        $(function () {
+            
+            var jasmineEnv = jasmine.getEnv();
+
+            jasmineEnv.updateInterval = 1000;
+            var htmlReporter = new jasmine.HtmlReporter();
+
+            jasmineEnv.addReporter(htmlReporter);
+            jasmineEnv.specFilter = function (spec) {
+                return htmlReporter.specFilter(spec);
+            };
+
+            var currentWindowOnload = window.onload;
+
+            window.onload = function () {
+                if (currentWindowOnload) {
+                    currentWindowOnload();
+                }
+                execJasmine();
+            };
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+        });
+
     </script>
 }
 
@@ -131,7 +171,7 @@
             <tr><td><input data-bind="value:Name ,attr:{ Id:'Name'+Id()}"/></td><td><input data-bind="value:Address,attr:{ Id:'Address'+Id()}"/></td></tr>
         </tbody>
         <tfoot>
-            <form data-bind="submit: addAddressBookEntry">
+            <form id="addressBookForm" data-bind="submit: addAddressBookEntry">
                 <tr class="row"><td><input data-bind="value:Name ,attr:{ Id: 'Name'+Id()}" /></td><td><input data-bind="value:Address,attr:{ Id:'Address'+Id()}"/></td></tr>
             </form>
         </tfoot>

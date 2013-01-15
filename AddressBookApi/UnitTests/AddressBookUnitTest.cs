@@ -33,7 +33,7 @@ namespace AddressBookApi.Tests
         }
 
         [Test]
-        public void T1_ItChecksInitialValuesOfContactList()
+        public void ItChecksInitialValuesOfContactList()
         {
             driver.Navigate().GoToUrl("http://localhost:41985/");
             IWebElement NameElement = WebDriverExtensions.FindElement(driver,By.Id("Name1"),1,true);
@@ -44,7 +44,7 @@ namespace AddressBookApi.Tests
         }
 
         [Test]
-        public void T2_ItAddsNewContactToList()
+        public void ItAddsNewContactToList()
         {
             driver.Navigate().GoToUrl("http://localhost:41985/");
 

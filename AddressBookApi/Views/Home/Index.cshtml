@@ -59,11 +59,11 @@
                 self.addAddressBookEntry = function () {
                     self.AddressBookEntriesArray.push(new AddressBookEntry("newName", "newAddress"));
                 }; */
-
+                self.testAdd = function (self) { self.AddressBookEntriesArray.push(new AddressBookEntry(2, 'Freelancer', 'NoBugsPlanet')) };
                 self.addAddressBookEntry = function () {
                     if (self.Name() == "" || self.Address() == "")
                         return false;
-                    //alert('self.Name=' + self.Name());
+                    alert('self.Name=' + self.Name());
                     var jsondata = new AddressBookEntry(++highestId, self.Name(), self.Address());
                     jsondata = ko.toJS(jsondata);
                     jsondata = JSON.stringify(jsondata);
@@ -110,7 +110,7 @@
 
     </script>
 
-    <script src="~/Content/scripts/specs/testInitialValuesSpec.js"></script>
+    <script src="~/Content/scripts/specs/testAllSpec.js"></script>
 
     <script type="text/javascript">
         //kickoff jasmine test runner

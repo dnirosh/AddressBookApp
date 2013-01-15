@@ -36,5 +36,18 @@
         expect(ko_view_model.AddressBookEntriesArray()[0].Address).toBe('Earth');
     });
 
+    it(" ItAddsNewContactToList ", function () {
+        setTimeout(function () {
+            timerCallback();
+        }, 5);
 
+        //buy time till knockout values are rendered 
+        jasmine.Clock.tick(5);
+
+        ko_view_model.testAdd(ko_view_model);
+
+        //test for added values 
+        expect(ko_view_model.AddressBookEntriesArray()[1].Name).toBe('Freelancer');
+        expect(ko_view_model.AddressBookEntriesArray()[1].Address).toBe('NoBugsPlanet');
+    });
 });
